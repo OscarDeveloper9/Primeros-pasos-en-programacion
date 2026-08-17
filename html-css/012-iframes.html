@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+	<meta charset="utf-8">
+
+	<!--Etiqueta  para colocar un icono de 16x16 px en la solapa del navegador o cuando se añade a favoritos/marcadores, el nombre de la imagen debe coincidir con lo que pongas en el atributo href de la etiqueta link-->
+
+	<!--Puedes generar iconos online desde, por ejemplo, https://www.favicon-generator.org/-->
+
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+	<!--Optimización para dispositivos móviles-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Iframes</title>
+
+	<!--Etiquetas META -->
+	<!--PRESENTACION EN RESULTADOS Y NAVEGADOR-->
+	<!--Para que en los resultados de búsqueda aparezca correctamente representada la página localizada con titulo y descripcion -->
+
+	<meta name="title" content="Desarrollo de Aplicaciones Web">
+	<meta name="description" content="Práctica realizada para el curso desarrollo de aplicaciones web por el alumno Alfredo Hurtado">
+
+	<!--POSICIONAMIENTO-->
+	<!--Los grandes motores de búsqueda como Google ya no las utilizan, pero sí
+			los pequeños buscadores. RECOMIENDO entre 8 y 10 palabras clave y un máximo de 255 caracteres (otros hablan de un máximo de 25 palabras y 500 caracteres)-->
+
+	<meta name="keywords" content="DAW, desarrollo web, desarrollador web, html, css, javascript, php, mysql, wordpress, cms">
+
+	<meta name="author" content="Tu nombre y el primer apellido">
+
+	<!--Enlaces a la/las hojas de estilo necesarias-->
+
+
+	<link rel="stylesheet" type="text/css" href="css-globales/normalize.css">
+
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+	<link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<hr>
+			<h1>Insertando IFRAMES</h1>
+
+		</header>
+
+
+		<?php
+		include 'menu.php';
+
+		?>
+		<div class="clearfix"></div>
+		<main>
+			<section>
+
+				<center>
+
+					<p>Realizada con <a href="https://code.visualstudio.com/" target="_blank" title="Ir a la página de descarga"><abbr title="Visual Studio Code">VSC</abbr></a></p>
+					<hr>
+					<table width="992" border="1">
+						<tr>
+							<td>
+								<h2>Spotify Iframe</h2>
+
+								<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1qbzz1pQaX7FjmIzDSKd2J?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+							</td>
+							<td>
+								<h2>SoundCloud Iframe</h2>
+
+								<iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/156172782&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+							</td>
+
+						</tr>
+						<tr>
+
+							<td>
+								<h2>Googl Maps Iframe</h2>
+								<iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53855.36169658453!2d-58.305052584589326!3d-32.47375880232932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95afdb005dbc939d%3A0x3c8a23c6cb1334b2!2sConcepci%C3%B3n%20del%20Uruguay%2C%20Entre%20R%C3%ADos%2C%20Argentina!5e0!3m2!1ses!2ses!4v1654513523821!5m2!1ses!2ses"></iframe>
+							</td>
+
+							<td>
+								<h2>Diario Deportivo Iframe</h2>
+
+								<iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://www.ole.com.ar/"></iframe>
+
+							</td>
+
+						</tr>
+						<tr>
+
+							<td></td>
+							<td></td>
+
+						</tr>
+
+					</table>
+				</center>
+			</section>
+		</main>
+		
+		<?php
+		include './FooterAlternativo.php';
+
+		?>
+	</div>
+</body>
+
+</htmL>

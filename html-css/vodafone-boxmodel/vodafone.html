@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="@hm-2022-R1">
+    <meta name="title" content="Portfolio del desarrollador web: @hm-2022-R1">
+    <meta name="description" content="Vamos a utilizar flexbox para conseguir que todo se vea de manera adecuada en distintos tamaños de resolucion">
+    <meta name="keywords" content="flexbox, tamano, movil, tablet, desktop, publicidad">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+    <title>Practica BoxModel</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+        /*FUENTES DEL PROYECTO*/
+        * {
+
+            font-family: 'Roboto', Arial, Verdana, sans-serif;
+            font-size: 100%;
+        }
+
+        h2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 30px;
+            border: 4px solid;
+            border-style: dotted;
+            border-radius: 30px;
+            color: red;
+            text-align: center;
+
+        }
+
+        main {
+            border: 1px solid black;
+            max-width: 992px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        header {
+            /* border: 1px solid red; */
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        #imgCentralCabecera{margin-left:250px;margin-right: 250px;}
+
+        figure{display: inline;}
+
+
+        #letreroGrande {
+            width: 500px;
+            text-align: center;
+            display: inline-block;
+            margin-left:120px;
+            vertical-align:middle;
+           /*  border:1px dashed pink; */
+
+        }
+        #letreroGrande span {
+            font-size: 6rem;
+            color: red;
+            font-weight: bold;
+
+        }
+        h1 {
+            font-size: 40px;
+            color: #333333;
+            line-height: 4rem;
+        }
+
+        article{
+            display:inline-block;
+            margin:20px;
+            vertical-align:text-top;
+            text-align: center;
+            width: 200px;
+       /*  border:1px solid red; */}
+
+        .imgCircular {
+            width: 100%;
+            border-radius: 150px;
+
+        }
+
+        .colorNegro {
+            color: #333333;
+        }
+
+
+        /****************FORMULARIO****************/
+
+        .letrasInformate {
+            width: 100%;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .letrasQuieres {
+            width: 100%;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        #nombre {
+            width: 100%;
+        }
+
+        #nombre input {
+            width: 98%;
+        }
+
+        #telefono {
+            width: 42%;
+            margin-right: 4%;
+            display: inline-block; 
+        }
+
+        #telefono input {
+            width: 95%;
+        }
+
+        #email {
+
+            width: 53%;
+            display: inline-block;
+            text-align:right;
+        }
+
+        #email input {
+            width: 96%;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+        }
+
+        #cajitas {
+            width: 100%;
+        }
+
+        #cajitas div {
+            /*border: 1px solid;*/
+            width: 43%;
+            margin-bottom: 20px;
+            margin-left:20px;
+            display: inline-block;
+        }
+        #boton{text-align:center;}
+        .btnEnviar {
+            box-shadow:inset 0px 34px 0px -15px #b54b3a;
+            background-color:#a73f2d;
+            border-radius:4px;
+            border:1px solid #241d13;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:12px 30px;
+            text-decoration:none;
+            text-shadow:0px -1px 0px #7a2a1d;
+}
+        .btnEnviar:hover {
+            background-color:#b34332;
+        }
+        .btnEnviar:active {
+            position:relative;
+            top:1px;
+        }
+    </style>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+
+<body>
+
+    <main>
+
+        <header>
+           
+                <img src="img/logoLidertel.png" title="Logo Lidertel">
+
+                <img src="img/logoFederacionTenis.png" title="Logo Federación de Tenis" id="imgCentralCabecera">
+
+                <img src="img/logoVodafone.png" title="Logo Vodafone">
+
+        </header>
+
+        <section id="Promocion">
+            
+                <figure>
+                    <img src="img/movilVodafone.png" title="Logo Lidertel" style="vertical-align: middle;" >
+                </figure>
+           
+            <div id="letreroGrande" class="animate__animated animate__heartBeat">
+                <h1>VENTE A VODAFONE ONE Y CONSIGUE LA LICENCIA ANUAL DE LA FTM</h1>
+                <span>GRATIS</span>
+            </div>
+
+        </section>
+
+        <div>
+            <h2>FIBRA, LLAMADAS Y DATOS ILIMITADOS POR <span class="colorNegro">29.90€</span></h2>
+        </div>
+
+        <section>
+            <article>
+
+                <figure><img src="img/fibra.jpg" class="imgCircular" title="Fibra 5G"></figure>
+                <h3>FIBRA ÓPTICA VODAFONE</h3>
+                <p>Disfruta ya de la mejor fibra del mercado, simétrica, sin cortes ni interrupciones.</p>
+
+            </article>
+
+            <article>
+
+                <figure><img src="img/ilimitables.jpg" class="imgCircular" title="Llamadas y datos ilimitados"></figure>
+                <h3>LLAMADAS Y DATOS ILIMITADOS</h3>
+                <p>Las tarifas ilimitadas de Vodafone incluyen llamadas y datos móviles.</p>
+
+            </article>
+            <article>
+
+                <figure><img src="img/vodafone5g.png" class="imgCircular" title="Experiencia 5G"></figure>
+                <h3>LA EXPERIENCIA DE TENER 5G</h3>
+                <p>Somos el único operador con el que podrás disfrutar en tu movil la velocidad 5G, con velocidades superiores a 1Gbps.</p>
+
+            </article>
+            <article>
+
+                <figure><img src="img/series.jpg" class="imgCircular" title="Series en Vodafone"></figure>
+                <h3>LAS SERIES TIENEN UN NOMBRE, VODAFONE</h3>
+                <p>Vodafone es el mayor agregador de contenidos de cine y series del mundo.</p>
+
+            </article>
+        </section>
+
+        <div>
+            <h2>MUCHO MÁS QUE UNA LICENCIA</h2>
+        </div>
+
+        <section>
+            <article>
+
+                <figure><img src="img/raquetasTenis.jpg" class="imgCircular" title="Raquetas de tenis"></figure>
+                <h3>SEGURO</h3>
+                <p>Al estar federado, estás cubierto ante cualquier accidemte que te ocurra mienteas juegas al tenis.</p>
+
+            </article>
+
+            <article>
+
+                <figure><img src="img/bolasTenis.jpg" class="imgCircular" title="Pelotas de tenis"></figure>
+                <h3>COMPETICIONES</h3>
+                <p>Con tu licencia, podrás participar en las competiciones federadas de todo el territorio nacional.</p>
+
+            </article>
+            <article>
+
+                <figure><img src="img/pistaTenis.jpg" class="imgCircular" title="Pista de tenis"></figure>
+                <h3>ASESORAMIENTO</h3>
+                <p>Recibirás asesoramiento en temas de formación, regulación laboral, servicio judírico, fiscal y contable.</p>
+
+            </article>
+            <article>
+
+                <figure><img src="img/zapatillasTenis.jpg" class="imgCircular" title="Zapatillas de tenis"></figure>
+                <h3>FORMACIÓN</h3>
+                <p>Organizamos concursos, conferencias y charlas dirigidas a entrenadores, directores, padres y jugadores.</p>
+
+            </article>
+        </section>
+
+        <section id="formulario">
+            <p class="letrasInformate">INFÓRMATE SIN COMPROMISO</p>
+            <p class="letrasQuieres">¿Lo quieres?</p>
+            <p>Déjanos tus datos y nos pondremos en contacto contigo para informate de todo</p>
+
+            <form action="mailto:micorreo@micorreo.com" method="post" enctype="text/plain">
+                <div id="nombre">
+                    <input type="text" name="Nombre" placeholder="Nombre y Apellidos" maxlength="100" required>
+                </div>
+                <div id="telefono">
+                    <input class="margenDerecho" type="tel" name="Telefono" placeholder="Nº teléfono de contacto, 987654321" maxlength="9" required pattern="[0-9]{9}">
+                </div>
+                <div id="email">
+                    <input type="email" name="Email" placeholder="Correo electrónico" maxlength="40" required>
+                </div>
+
+                <div id="cajitas">
+                    <div>
+                        <input name="PoliticaPrivacidad" type="checkbox" required value="Si">
+                        He leído y acepto la <a href="#">política de privacidad</a>.
+                    </div>
+
+                    <div>
+                        <input name="AutorizacionInformacion" type="checkbox" value="Si">
+                        Autorizo el envio de información.
+                    </div>
+                </div>
+
+                <div id="boton">
+                    <input class="btnEnviar" type="submit" name="EnviarDatos" value="Enviar">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</body></html>

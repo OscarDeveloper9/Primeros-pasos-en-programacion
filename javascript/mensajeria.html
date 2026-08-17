@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="es" />
+    <title>| DAW | - JAVASCRIPT</title>
+    <meta name="Title" content="| DAW | - JAVASCRIPT" />
+    <meta name="description" content="Ejercicicios utilizando tecnologías WEB en el cliente" />
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JAVASCRIPT, PHP, SQL, Bases de datos, Hease, WEB, Accesibilidad" />
+    <meta name="distribution" content="global" />
+    <meta name="author" content="Vuestro nombre" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--    Animaciones CSS https://daneden.github.io/animate.css/-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <!--El menu es de aqui: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <!--Estilos-->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #000000;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            opacity: 0.9;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        /*CSS para la imagen de fondo y los textos centrados estilo etiquetas*/
+
+        body,html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+
+        }
+
+        .bgimg-1 {
+            position: relative;
+            background: url("./img/Hawaii-Beach-1920x1080.jpg") no-repeat center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            opacity: 0.85;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            color: #000000;
+            opacity: 0.85;
+            z-index: -100;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+
+            /*Si comentamos la linea inferior las etiquetas de texto quedan juntas, valorar al gusto*/
+
+            line-height: 100px;
+
+        }
+        
+        #contenido{
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 90%;
+            background-color:snow;
+            border: 1px solid black;
+            padding: 50px;
+
+            
+            
+        }
+
+        .mano{
+            cursor: pointer;
+        }
+
+        footer {
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #000000;
+            opacity: 0.85;
+            padding: 10px;
+            color: white;
+
+        }
+
+        /*        Enlaces para el pie*/
+        a.enlacepie:link {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:visited {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:hover {
+            text-decoration: underline;
+            color: lightpink;
+        }
+
+        a.enlacepie:active {
+            text-decoration: underline;
+            color: lightpink;
+        }
+
+        /* ESTILOS DEL EJERCICIO */
+  /* estilos del ejercicio */
+  body {
+	text-align: center;
+	color: #2C2C2C;
+	font-family: "Segoe UI";
+	font-size: 1.1em;
+}
+
+main{
+	margin: 25px auto;
+	width: 80%;
+	text-align: center;
+	}
+
+table {
+	border-radius: 10px;
+	width: 300px;
+	height: 145px;
+	margin: auto;
+	padding: 25px;
+	box-shadow: 0px 2px 9px #aaa;
+	background: linear-gradient(#f2f2f2, #fff);
+	text-align: left;
+}
+h2{
+	text-align: center;
+	margin-top: 25px;
+	color: #280D7B;
+	}
+
+input{
+	width: 50px;
+	text-align: right;
+	font-size: inherit;
+}
+.resultado {
+	font-weight: bold;
+	color: #0C3;
+	background-color: #EAEAEA;
+}
+.margenizdo {
+	padding-left: 20px;
+}
+#apDiv1 {
+	position: absolute;
+	left: 761px;
+	top: 201px;
+	width: 289px;
+	height: 129px;
+	z-index: 1;
+}
+#mensajeError {
+	position: absolute;
+	left: 650px;
+	top: 238px;
+	width: 348px;
+	height: 97px;
+	z-index: 1;
+	color: #F00;
+}
+
+.paqueteriaFoto{
+    display: flex;
+    float: left;
+
+    }
+
+    </style>
+
+<script>
+
+function calcular(){
+	
+    var carta = parseInt(document.getElementById("cartas").value);
+	var paquetes = parseInt(document.getElementById("paquetes").value);
+	
+	if (carta<0 || paquetes<0){
+//	
+	document.getElementById('mensajeError').innerHTML='Error, corrige el número negativo, listillo...';
+	noBoton();
+//	
+	}else{//Si llegamos aqui, oculto error y hacemos cálculos
+	
+        document.getElementById('boton').style.visibility = "visible";
+        document.getElementById('mensajeError').innerHTML='';
+	var total = carta + paquetes;
+	var pvpSinIva = total * 3;
+	var totalIva = (pvpSinIva * 1.21).toFixed(2);
+	var iva = (totalIva - pvpSinIva).toFixed(2);
+	
+	document.getElementById('mensaje1').innerHTML= total;
+	document.getElementById('mensaje2').innerHTML= pvpSinIva +' €';
+	document.getElementById('mensaje3').innerHTML= iva +' €';
+	document.getElementById('mensaje4').innerHTML= totalIva +' €';
+}
+}
+
+function noBoton(){
+	
+	document.getElementById('boton').style.visibility = "hidden";
+	
+	}
+
+    
+</script>
+</head>
+
+<body>
+    <main class="bgimg-1 animated fadeIn">
+       
+        <nav class="topnav" id="myTopnav">
+
+<a href="../index.html">HOME</a>
+
+<div class="dropdown">
+
+    <button class="dropbtn">Técnicos
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./abono.html">Abono transporte</a>
+        <a href="./tombola.html">¡Tombola!</a>
+        <a href="./mensajeria.html">Mensajería</a>
+        <a href="./calorias.html">Chocolate</a>
+        <a href="./editor-de-texto.html">Procesador de Textos</a>
+        <a href="./ajax.html">Ajax & Xml</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Box
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./lightbox.html">LightBox</a>
+        <a href="./shadowbox.html">ShadowBox</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Sliders<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./slider.html">Modelo 1</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Galerías
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./galeria.html">Modelo 1</a>
+        <a href="./galeria-dos.html">Modelo 2</a>
+
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Tiempo
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./reloj.html">Reloj</a>
+        <a href="./date-picker.html">DatePicker</a>
+        <a href="./countdown.html">CountDown</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">jQuery
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./fotorama.html">Fotorama</a>
+        <a href="./tabs.html">Tabs</a>
+
+    </div>
+</div>
+
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+
+        <!--A partir de aqui el contenido-->
+
+        <div>
+            <div class="caption animated zoomInDown">
+                <span class="border">Mensajeria speedy</span><br>
+                    
+                    <div id="contenido">
+                    
+                    <h1><body onLoad="noBoton();">
+
+<main>
+  <img src="./img/paqueteria1.jpg" width="650" height="96" id="paqueteriaFoto">
+  
+ <div id="mensajeError">
+   <h6></h6>
+ </div>
+  <h2>Presupuesto de mensajería</h2>
+
+  <table>
+    <tbody><tr>
+      <td>Cartas</td>
+      <td align="right">
+          <input name="cartas" id="cartas" value="0" type="number" min="0" autofocus onchange="calcular();" ></td>
+    </tr>
+    <tr>
+      <td>Paquetes</td>
+      <td align="right">
+          <input name="paquetes" id="paquetes" value="0" onchange="calcular();" type="number" min="0">
+    </td></tr>
+    <tr>
+      <td class="margenizdo">Total bultos</td>
+      <td align="right" id="mensaje1">0</td>
+    </tr>
+    <tr>
+      <td class="margenizdo">Precio por bulto</td>
+      <td align="right">3€</td>
+    </tr>
+    <tr>
+      <td class="margenizdo">PVP sin IVA</td>
+      <td align="right" id="mensaje2">0</td>
+    </tr>
+    <tr>
+      <td class="margenizdo">IVA 21%</td>
+      <td align="right" id="mensaje3">0</td>
+    </tr>
+    <tr>
+      <td height="45" class="margenizdo"><strong>Total con IVA</strong></td>
+      <td align="right" class="resultado" id="mensaje4">0</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="margenizdo">
+          <a href="https://www.paypal.com/es/home" target="_blank">
+              <img src="./img/PayPal.png" alt="botón de pago a Paypal" name="boton" id="boton" width="205" height="52"  title="Al pulsar te redireccionamos a la pasarela de pago en Paypal"></a></td>
+      </tr></h1></h1>
+                    
+                    </div>
+                
+               </span>
+            </div>
+
+        </div>
+        <footer>Fuente: <a href="#" class="enlacepie">Dirección URL de la web donde esté el Script</a></footer>   
+    </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcuticon" href="../favicon.ico" type="image/ico">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>Imágenes-II</title>
+	<link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+</head>
+<body>
+<div id="container">
+<header>
+	<hr>
+	<h1><a id="arriba"></a>Sobre las imágenes - II</h1>
+	
+</header>
+
+<body>
+
+<?php 
+		include 'menu.php';
+		
+		?>
+<div class="clearfix"></div>
+<main>
+	<section id="imagenes II">
+		
+		<p>Las imágenes es bastante común encontrarlas relacionadas con la etiqueta de los enlaces para provocar dos
+			comportamientos muy extendidos. Estos son dos fundamentalmente:</p>
+
+		<h3> <a href="https://www.google.es/" target="_blank"><img src="./img/LogodeGoogle.jpg" width="200px" height="83px"
+					alt="Logotipo de Google" align="left" hspace="20px"
+					title="Pulsa para ir a la página de Google"></a>Imagen cómo máscara del enlace </h3>
+
+		<p><i><b>&lt; a href=&quot;http://www.google.es&quot; target=&quot;_blank&quot;&gt; &lt;img
+					src=&quot;imagen.jpg&quot; /&gt;&lt; /a&gt;</b></i> </p>
+		<p>&nbsp;</p>
+
+		<h3>Imagen que conecta con otra imagen (generalmente ampliada)) </h3>
+
+		<p><b><i>&lt; a href=&quot;imagen_gran.jpg&quot; target=&quot;_blank&quot;&gt; &lt;img
+					src=&quot;imagen_pq.jpg&quot; /&gt;&lt; /a&gt; </i></b></p>
+		<p><a href="https://picsum.photos/id/1015/1200/675" target="_blank"><img src="https://picsum.photos/id/1015/200/112" width="200" height="112"
+					alt="miniatura de imágen" hspace="20" title="pulsa para ampliar la imágen"></a><a
+				href="https://picsum.photos/id/1016/1200/675" target="_blank"><img src="https://picsum.photos/id/1016/200/112" width="200px" height="112"
+					alt="" title="Pulsa para ampliar la imágen"></a></p>
+		<p><br>
+			También es bastante común la necesidad de dejar trasparentes algunas partes de la imágen con el objetivo de
+			respetar las imágenes o colores de fondo que hallamos puesto para toda la página web. Las imágenes con zonas
+			transparentes estan en formato<b> *.gif </b>o <b>*.png</b> que son los que conservan dicha particularidad si
+			creas zonas transparentes en las imágenes y las guardas en formato *.jpg te seguiran apareciendo con fondo
+			blanco.</p>
+
+		<pre><em>Imagen sin transparencia 	     Imagen con trasparencia</em>
+				<p><img src="./img/LogoFatWreckSin.jpg" width="200px" height="83px" alt="">		<img src="./img/LogoFatWreckCon.png" width="200px" height="83px" alt=""></pre>
+
+		<p>Para crear zonas trasnparentes en una imágen necesitas alguna aplicación que te permita seleccionar sobre la
+			imágen el color a &quot;transparentar&quot; y una vez realizada la operación guardarla en el formato
+			adecuado. Evidentemente para apreciar el efecto es necesario disponer de al menos algún color de fondo para
+			la página, y que en ésta ocasión y dado que no hemos visto CSS, lo haremos directamente agregando el atriuto
+			bgcolor=&quot;#RRGGBB&quot; en la etiqueta &lt;BODY&gt;</p>
+
+		<h3><img src="./img/Bergkamp.gif" width="165" height="125" alt="" align="left" hspace="20">También es
+			posible la creación de efectos e imágenes animadas con multitud de herramientas online, prueba a crear
+			alguno con algunas de éstas aplicaciones online:</h3>
+
+		<ul>
+			<li><a href="http://www.online-image-editor.com/" target="_blank">http://www.online-image-editor.com/</a>
+			</li>
+			<li><a href="http://picasion.com/es/" target="_blank">http://picasion.com/es/</a></li>
+			<li><a href="https://www.photopea.com/" target="_blank">Para el tratamiento de imágenes online
+					(Photopea)</a></li>
+		</ul>
+
+		<p>&nbsp;</p>
+		<hr />
+		<p align="right"><a href="#arriba">SUBIR</a></p>
+	</section>
+</main>
+
+ <?php 
+	include './FooterAlternativo.php';
+	
+    ?> 
+	
+	</div>
+</body>
+
+</html>

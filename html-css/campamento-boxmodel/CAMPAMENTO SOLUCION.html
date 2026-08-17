@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--Etiqueta  para colocar un icono en la solapa del navegador o cuando se añade a favoritos/marcadores   
+       	 <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />-->
+
+    <!--Optimización para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cambiar el título en cada página</title>
+    <!--Etiquetas META -->
+    <!--POSICIONAMIENTO-->
+    <meta name="title" content="Como máximo 55 caracteres incluyendo espacios en blanco">
+    <meta name="description" content="Como máximo 110 caracteres incluyendo espacios en blanco">
+    <!--Los grandes motores de búsqueda como Google ya no las utilizan, pero sí
+			los pequeños buscadores. rECOMIENDO entre 8 y 10 palabras clave y un máximo de 255 caracteres 
+										(otros hablan de un máximo de 25 palabras y 500 caracteres)-->
+    <meta name="keywords" content="palabras clave separadas por coma">
+    <meta name="author" content="profesor-AHM">
+
+    <!--Enlaces a las/las hojas de estilo necesarias
+                <link rel="stylesheet" type="text/css" href="/css/comun.css" /> -->
+
+    <!-- Scripts que realizan operaciones en la estructura de la página cuando se carga
+									<script src="js/YY.js"></script> -->
+
+    <style>
+        /*Para la colocación de las cajas de la cabecera en lugar de emplear float, se ha utilizado display:inline-block*/
+
+        /*Te he dejado todo con un borde para que aprecies las cajas*/
+
+        /*En esta ocasión, al ser un css que sólo está pensado para una única página lo he almacenado en la cabecera*/
+
+        * {
+           /*  border: 1px solid #333; */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            color: #242424;
+        }
+
+
+
+       main {
+            /*  width: 90%; */
+            width: 992px;
+            margin: 0 auto;
+            background-color: rgba(248, 248, 248,.8);
+            
+        }
+
+        
+
+       h1 {
+            font-size: 1.8em;
+            color: #000;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: green;
+            text-align: center;
+        }
+
+       p {
+            line-height: 1.4em;
+            margin-bottom: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+     
+     #logo {
+           /*  width: 10%; */
+            width: 150px;
+            margin-left: 6px;
+        }
+
+        
+
+        #cajaredesociales {
+            width: 50%;
+            display: inline-block;
+            background-color: aquamarine;
+            overflow: auto;
+            text-align: center;
+            margin-left: 14px;
+            margin-right: 14px;
+            padding:4px;
+            
+        }
+       #tfno {
+            width: 28%;
+            display: inline-block;
+            overflow: auto;
+            text-align: right;
+            font-weight: 700;
+            background-color: rgb(233, 233, 233);
+            font-size: 1.5rem;
+         
+            padding: 0.09em;
+            
+        }
+
+         #mapa {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+   .redesociales {width: 50px;}
+ 
+ 
+ </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <img src="logo.png" id="logo" alt="logotipo del campamento">
+
+
+            <div id="cajaredesociales">
+
+                <img src="f.png" class="redesociales" alt="Red social Facebook">
+                <img src="t.png" class="redesociales" alt="Red social twitter">
+                <img src="y.png" class="redesociales" alt="Red social youtube">
+                <img src="w.png" class="redesociales" alt="Red social youtube">
+
+            </div>
+
+            <div id="tfno">
+               
+                900 123 123
+                <br>
+                608 45 56 78
+
+            </div>
+
+
+
+        </header>
+
+        <section id="desc">
+
+            <h1>Campamento Katanga</h1>
+            <h2>Campamento de verano para los más pequeños</h2>
+            <p>Esto seria un breve párrafo con un texto normal, repito, Esto seria un breve párrafo con un texto normal,
+                repito...Esto seria un breve párrafo con un texto normal, repito, Esto seria un breve párrafo con un
+                texto normal, repito...Esto seria un breve párrafo con un texto normal, repito, Esto seria un breve
+                párrafo con un texto normal, repito...Esto seria un breve párrafo con un texto normal, repito, Esto
+                seria un breve párrafo con un texto normal, repito... </p>
+
+        </section>
+
+        <section id="mapa">
+            <h2>Localización</h2>
+            
+
+
+
+        </section>
+
+
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4292.264436104545!2d-3.8777133611563914!3d40.473289620879285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41848df93cb9fb%3A0x8c9d5c31a93ef7a9!2sCalle+Viento%2C+10%2C+28220+Majadahonda%2C+Madrid!5e0!3m2!1ses!2ses!4v1554720671019!5m2!1ses!2ses"
+        width="100%" height="450" style="border:0" allowfullscreen></iframe>
+
+
+    </main>
+
+
+
+
+    <hr>
+
+
+
+
+</body>
+<!-- Scripts que no realizan operaciones en la estructura de la página cuando se carga
+			<script src="js/xx.js"></script>-->
+
+</html>

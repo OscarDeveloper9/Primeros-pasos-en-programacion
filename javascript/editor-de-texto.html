@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="es" />
+    <title>| DAW | - JAVASCRIPT</title>
+    <meta name="Title" content="| DAW | - JAVASCRIPT" />
+    <meta name="description" content="Ejercicicios utilizando tecnologías WEB en el cliente" />
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JAVASCRIPT, PHP, SQL, Bases de datos, Hease, WEB, Accesibilidad" />
+    <meta name="distribution" content="global" />
+    <meta name="author" content="Vuestro nombre" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--    Animaciones CSS https://daneden.github.io/animate.css/-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <!--El menu es de aqui: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <!--Estilos-->
+    <style>
+  *{
+            
+            margin:0;
+            padding: 0;
+        }
+        
+        body {
+
+            font-family: verdana, arial;
+            font-size: 100%;
+
+        }
+        #titulo{
+            
+            font-family: arial, sans-serif;
+            padding: 20px;
+            color:#0699ca;
+            
+            
+        }
+        img{
+            display: inline;
+            width: 50px;
+           vertical-align: middle;
+            margin-right: 10px;
+/*            float: left;*/
+            
+            
+        }
+        
+        #barraControles{
+            
+            background-color: rgba(65,65,65,.3);
+            padding: 20px;
+            
+        }
+        .borde{
+            
+            border: 1px solid black;
+            padding: 4px;
+            
+        }
+        
+        #contTextarea{
+/*            border:1px solid red;*/
+            width: 992px;
+            margin:auto;
+        }
+        
+        textarea{
+            display: block;
+            width:800px;
+            min-height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 12px;
+            border:0px;
+                    
+            -webkit-box-shadow: 10px 10px 5px -6px rgba(102,102,102,1);
+            -moz-box-shadow: 10px 10px 5px -6px rgba(102,102,102,1);
+            
+            box-shadow: 10px 10px 5px -6px rgba(102,102,102,1); 
+            
+        }
+        
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #000000;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            opacity: 0.9;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        /*CSS para la imagen de fondo y los textos centrados estilo etiquetas*/
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+
+
+        }
+
+        .bgimg-1 {
+            position: relative;
+            background: url("./img/Hawaii-Beach-1920x1080.jpg") no-repeat center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            opacity: 0.85;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            color: #000000;
+            opacity: 0.85;
+            z-index: -100;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+
+            /*Si comentamos la linea inferior las etiquetas de texto quedan juntas, valorar al gusto*/
+
+            line-height: 100px;
+
+        }
+        
+        #contenido{
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 90%;
+            background-color:snow;
+            border: 1px solid black;
+            padding: 50px; 
+            
+        }
+
+        .mano{
+            cursor: pointer;
+        }
+
+        footer {
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #000000;
+            opacity: 0.85;
+            padding: 10px;
+            color: white;
+
+        }
+
+        /*        Enlaces para el pie*/
+        a.enlacepie:link {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:visited {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:hover {
+            text-decoration: underline;
+            color: lightpink;
+        }
+
+        a.enlacepie:active {
+            text-decoration: underline;
+            color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="bgimg-1 animated fadeIn">
+       
+        <nav class="topnav" id="myTopnav">
+
+<a href="../index.html">HOME</a>
+
+<div class="dropdown">
+
+    <button class="dropbtn">Técnicos
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./abono.html">Abono transporte</a>
+        <a href="./tombola.html">¡Tombola!</a>
+        <a href="./mensajeria.html">Mensajería</a>
+        <a href="./calorias.html">Chocolate</a>
+        <a href="./editor-de-texto.html">Procesador de Textos</a>
+        <a href="./ajax.html">Ajax & Xml</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Box
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./lightbox.html">LightBox</a>
+        <a href="./shadowbox.html">ShadowBox</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Sliders<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./slider.html">Modelo 1</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Galerías
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./galeria.html">Modelo 1</a>
+        <a href="./galeria-dos.html">Modelo 2</a>
+
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Tiempo
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./reloj.html">Reloj</a>
+        <a href="./date-picker.html">DatePicker</a>
+        <a href="./countdown.html">CountDown</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">jQuery
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./fotorama.html">Fotorama</a>
+        <a href="./tabs.html">Tabs</a>
+
+    </div>
+</div>
+
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+
+        <!--A partir de aqui el contenido-->
+
+        <div>
+            <div class="caption animated zoomInDown">
+                <span class="border">Editor de Texto</span><br>
+<!--                <span class="border">-->
+                    
+                    <div id="contenido">
+                    
+                    <h2>
+        <div id="titulo"><img src="./img/procesadorTexto.jpg">Maquetador de Texto.</div>
+    </h2>
+    <hr>
+    <div id="barraControles">
+    <div id="controles">Tamaño del texto
+        <select id="tamanyo" onChange="formato();">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12" selected>12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+        </select>
+
+        Tipo de texto
+        <select id="tipo" onChange="formato()">
+            <option value="arial" selected>arial</option>
+            <option value="verdana">verdana</option>
+            <option value="geneva">geneva</option>
+            <option value="georgia">georgia</option>
+        </select>
+
+        Color del texto
+        <select id="color" onChange="formato()">
+            <option value="#000000" selected>negro</option>
+            <option value="#CCCCCC">gris</option>
+            <option value="#6699FF">azul</option>
+        </select>
+        
+        Interlineado
+            <select id="interlineado" onChange="formato()">
+            <option value="0.5">0.5</option>
+            <option value="1" selected>1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            
+        </select>
+        
+    </div><br />
+    <div id="controles2">
+        Negrita&nbsp;
+        <input name="negrita" type="checkbox" value="negrita" id="negrita" onClick="formato()">&nbsp;&nbsp;&nbsp;&nbsp;
+        Cursiva&nbsp;
+        <input type="checkbox" name="cursiva" value="checkbox" id="cursiva" onClick="formato()">&nbsp;&nbsp;&nbsp;&nbsp;Subrayado&nbsp;
+        <input type="checkbox" name="subrayado" value="checkbox" id="subrayado" onClick="formato()">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <label for="Alineación">Alineación</label>
+        &nbsp;
+        <span class="borde">
+        <input name="a" type="radio" value="si" id="izquierda" onClick="formato()">&nbsp;Izq&nbsp;
+        <input name="a" type="radio" value="si" id="derecha" onClick="formato()">&nbsp;Dch&nbsp;
+        <input name="a" type="radio" value="si" id="centro" onClick="formato()">&nbsp;Cen&nbsp;
+        <input name="a" type="radio" id="justificado" onClick="formato()" value="si">
+        &nbsp;Justificada&nbsp;
+            </span>
+    </div>
+        
+        </div>
+    <!-- Como veis en cada elemento de formulario llamamos a la función que ahora vamos a configurar, onchange="formato()" para los menús deplegables y onclick="formato()" para las casillas de verificación y radiobotones -->
+    
+    <!-- Ahora creamos la capa que contendrá el texto a formatear -->
+    <hr>
+    <div id="contTextarea">
+    <textarea id="texto" placeholder="Escribe tu texto aqui..." autofocus></textarea>
+        </div>
+                    
+                    </div>
+                
+<!--                </span>-->
+            </div>
+
+        </div>
+        <footer>Fuente: <a href="#" class="enlacepie">Dirección URL de la web donde esté el Script</a></footer>
+    </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+        /*Creamos una sola función llamada formato donde declaramos las diferentes variables asociadas a la propiedad que deseamos cambiar  */
+
+        //   Opcion 2: Tendríamos más control creando una funcion para cada caso de formato
+
+        /*Emplearemos para aplicar formato el objeto del DOM expresamente diseñado apra éstas operaciones y que es el objeto Style del DOM http:www.w3schools.com/jsref/dom_obj_style.asp*/
+
+        function formato() {
+
+//select tamaño texto
+    var tam_texto;
+
+tam_texto = document.getElementById("tamanyo").value;
+document.getElementById("texto").style.fontSize = tam_texto + "px";
+
+//var tipo_texto;
+    var tipo_texto = document.getElementById("tipo").value;
+    document.getElementById("texto").style.fontFamily = tipo_texto;
+    
+    var color_texto;
+    color_texto = document.getElementById("color").value;
+    document.getElementById("texto").style.color = color_texto;
+
+    //Select interlineado
+    
+    
+    var interlineado;
+    
+    interlineado = document.getElementById("interlineado").value;
+    document.getElementById("texto").style.lineHeight = interlineado;
+    
+    var negrita;
+    negrita = document.getElementById("negrita").checked;
+    if (negrita == true) {
+        document.getElementById("texto").style.fontWeight = "bold";
+    } else {
+        document.getElementById("texto").style.fontWeight = "normal";
+    }
+
+    var cursiva;
+    cursiva = document.getElementById("cursiva").checked;
+    if (cursiva == true) {
+        document.getElementById("texto").style.fontStyle = "italic";
+    } else {
+        document.getElementById("texto").style.fontStyle = "normal";
+    }
+
+    var subrayado;
+    subrayado = document.getElementById("subrayado").checked;
+    if (subrayado == true) {
+        document.getElementById("texto").style.textDecoration = "underline";
+    } else {
+        document.getElementById("texto").style.textDecoration = "none";
+    }
+
+    var alineacion;
+    if (document.getElementById("izquierda").checked == true)
+        alineacion = "left";
+    if (document.getElementById("derecha").checked == true)
+        alineacion = "right";
+    if (document.getElementById("centro").checked == true)
+        alineacion = "center";
+    if (document.getElementById("justificado").checked == true)
+        alineacion = "justify";
+
+    document.getElementById("texto").style.textAlign = alineacion;
+}
+//-->
+    </script>
+
+</body></html>

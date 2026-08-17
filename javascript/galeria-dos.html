@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="es" />
+    <title>| DAW | - JAVASCRIPT</title>
+    <meta name="Title" content="| DAW | - JAVASCRIPT" />
+    <meta name="description" content="Ejercicicios utilizando tecnologías WEB en el cliente" />
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JAVASCRIPT, PHP, SQL, Bases de datos, Hease, WEB, Accesibilidad" />
+    <meta name="distribution" content="global" />
+    <meta name="author" content="Vuestro nombre" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--    Animaciones CSS https://daneden.github.io/animate.css/-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <!--El menu es de aqui: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <!--Estilos-->
+    
+    <style>
+   
+    </style>
+</head>
+
+<body>
+    <main class="bgimg-1 animated fadeIn">
+
+        <nav class="topnav" id="myTopnav">
+
+<a href="../index.html">HOME</a>
+
+<div class="dropdown">
+
+    <button class="dropbtn">Técnicos
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./abono.html">Abono transporte</a>
+        <a href="./tombola.html">¡Tombola!</a>
+        <a href="./mensajeria.html">Mensajería</a>
+        <a href="./calorias.html">Chocolate</a>
+        <a href="./editor-de-texto.html">Procesador de Textos</a>
+        <a href="./ajax.html">Ajax & Xml</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Box
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./lightbox.html">LightBox</a>
+        <a href="./shadowbox.html">ShadowBox</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Sliders<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./slider.html">Modelo 1</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Galerías
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./galeria.html">Modelo 1</a>
+        <a href="./galeria-dos.html">Modelo 2</a>
+
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Tiempo
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./reloj.html">Reloj</a>
+        <a href="./date-picker.html">DatePicker</a>
+        <a href="./countdown.html">CountDown</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">jQuery
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./fotorama.html">Fotorama</a>
+        <a href="./tabs.html">Tabs</a>
+
+    </div>
+</div>
+
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+
+        <!--A partir de aqui el contenido-->
+
+        <div>
+            <div class="caption animated zoomInDown">
+                <span class="border">Galeria Dos, no me funciona el plugg Drag!</span><br>
+                <!--                <span class="border">-->
+
+                <div class="gallery-wrapper">
+                    <ul class="thumb-list">
+                        <li class="is-active">
+                            <img width="1920" height="1280" src="https://assets.codepen.io/162656/sports-car1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img width="1920" height="1280" src="https://assets.codepen.io/162656/sports-car2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img width="1920" height="1280" src="https://assets.codepen.io/162656/sports-car3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img width="1920" height="1280" src="https://assets.codepen.io/162656/sports-car4.jpg" alt="">
+                        </li>
+                    </ul>
+                    <ul class="featured-list">
+                        <li class="is-active">
+                            <div class="featured-img" style="background-image: url(https://assets.codepen.io/162656/sports-car1.jpg); width: 1920px; height: 1280px;"></div>
+                        </li>
+                        <li>
+                            <div class="featured-img" style="background-image: url(https://assets.codepen.io/162656/sports-car2.jpg); width: 1920px; height: 1280px;"></div>
+                        </li>
+                        <li>
+                            <div class="featured-img" style="background-image: url(https://assets.codepen.io/162656/sports-car3.jpg); width: 1920px; height: 1280px;"></div>
+                        </li>
+                        <li>
+                            <div class="featured-img" style="background-image: url(https://assets.codepen.io/162656/sports-car4.jpg); width: 1920px; height: 1280px;"></div>
+                        </li>
+                    </ul>
+                    <span class="notification">Drag!</span>
+                    <button type="button" class="open-lightbox">Open Lightbox</button>
+                </div>
+
+                <div class="lightbox">
+                    <header class="lightbox-header">
+                        <button type="button" class="close-lightbox" aria-label="Close lightbox">✕</button>
+                    </header>
+                    <div class="lightbox-dialog">
+                        <section class="lightbox-content">
+                            <ul class="lightbox-items">
+                                <li>
+                                    <img src="https://assets.codepen.io/162656/sports-car1.jpg" alt="" width="1920" height="1280">
+                                </li>
+                                <li>
+                                    <img src="https://assets.codepen.io/162656/sports-car2.jpg" alt="" width="1920" height="1280">
+                                </li>
+                                <li>
+                                    <img src="https://assets.codepen.io/162656/sports-car3.jpg" alt="" width="1920" height="1280">
+
+                                </li>
+                                <li>
+                                    <img src="https://assets.codepen.io/162656/sports-car4.jpg" alt="" width="1920" height="1280">
+                                </li>
+                            </ul>
+                            <button type="button" class="lightbox-control lightbox-control-next" aria-label="Next slide">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                                    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+                                </svg>
+                            </button>
+                            <button type="button" class="lightbox-control lightbox-control-prev" aria-label="Previous slide">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                                    <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+                                </svg>
+                            </button>
+                        </section>
+                    </div>
+                </div>
+
+                <!--                </span>-->
+            </div>
+
+        </div>
+        <footer>Fuente: <a href="#" class="enlacepie">Dirección URL de la web donde esté el Script</a></footer>
+    </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script>
+        const body = document.body;
+const galleryWrapper = document.querySelector(".gallery-wrapper");
+const thumbList = galleryWrapper.querySelector(".thumb-list");
+const thumbItems = thumbList.querySelectorAll("li");
+const featuredList = galleryWrapper.querySelector(".featured-list");
+const featuredItems = featuredList.querySelectorAll("li");
+const featuredImgs = featuredList.querySelectorAll(".featured-img");
+const openLightbox = galleryWrapper.querySelector(".open-lightbox");
+const lightbox = document.querySelector(".lightbox");
+const lightboxItems = lightbox.querySelector(".lightbox-items");
+const lightboxControls = lightbox.querySelectorAll(".lightbox-control");
+const lightboxPrevControl = lightbox.querySelector(".lightbox-control-prev");
+const lightboxNextControl = lightbox.querySelector(".lightbox-control-next");
+const closeLightbox = lightbox.querySelector(".close-lightbox");
+const isActiveClass = "is-active";
+const isVisibleClass = "is-visible";
+const overflowYHiddenClass = "overflow-y-hidden";
+
+/* IMAGE GALLERY
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+thumbItems.forEach((el) => {
+  el.addEventListener("click", () => {
+    thumbList.querySelector("li.is-active").classList.remove(isActiveClass);
+    featuredList.querySelector("li.is-active").classList.remove(isActiveClass);
+    let index = Array.from(thumbItems).indexOf(el);
+    el.classList.add(isActiveClass);
+    featuredList
+      .querySelector(`li:nth-child(${++index})`)
+      .classList.add(isActiveClass);
+  });
+});
+
+document.addEventListener("keyup", (e) => {
+  if (e.keyCode === 38 || e.keyCode === 40) {
+    const activeThumb = thumbList.querySelector("li.is-active");
+    // up arrow
+    if (e.keyCode === 38) {
+      if (activeThumb.previousElementSibling) {
+        activeThumb.previousElementSibling.click();
+      } else {
+        thumbList.lastElementChild.click();
+      }
+    } else {
+      // down arrow
+      if (activeThumb.nextElementSibling) {
+        activeThumb.nextElementSibling.click();
+      } else {
+        thumbList.firstElementChild.click();
+      }
+    }
+  }
+});
+
+Draggable.create(featuredImgs, {
+  bounds: featuredList,
+  inertia: true
+});
+
+/* LIGHTBOX GALLERY
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+openLightbox.addEventListener("click", () => {
+  if (lightboxItems.querySelector("li.is-active")) {
+    lightboxItems.querySelector("li.is-active").classList.remove(isActiveClass);
+  }
+  body.classList.add(overflowYHiddenClass);
+  const el = featuredList.querySelector("li.is-active");
+  let index = Array.from(featuredItems).indexOf(el);
+  lightboxItems
+    .querySelector(`li:nth-child(n+${++index})`)
+    .classList.add(isActiveClass);
+  lightbox.classList.add(isVisibleClass);
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target === closeLightbox) {
+    body.classList.remove(overflowYHiddenClass);
+    lightbox.classList.remove(isVisibleClass);
+  }
+});
+
+document.addEventListener("keyup", (e) => {
+  // Esc
+  if (document.querySelector(".lightbox.is-visible") && e.keyCode === 27) {
+    body.classList.remove(overflowYHiddenClass);
+    lightbox.classList.remove(isVisibleClass);
+  }
+});
+
+for (const lightboxControl of lightboxControls) {
+  lightboxControl.addEventListener("click", (e) => {
+    const activeSlide = lightboxItems.querySelector("li.is-active");
+    activeSlide.classList.remove(isActiveClass);
+    if (e.currentTarget === lightboxNextControl) {
+      activeSlide.nextElementSibling
+        ? activeSlide.nextElementSibling.classList.add(isActiveClass)
+        : lightboxItems.firstElementChild.classList.add(isActiveClass);
+    } else {
+      activeSlide.previousElementSibling
+        ? activeSlide.previousElementSibling.classList.add(isActiveClass)
+        : lightboxItems.lastElementChild.classList.add(isActiveClass);
+    }
+  });
+}
+
+document.addEventListener("keyup", (e) => {
+  if (
+    document.querySelector(".lightbox.is-visible") &&
+    (e.keyCode === 37 || e.keyCode === 39)
+  ) {
+    // left arrow
+    if (e.keyCode === 37) {
+      lightboxPrevControl.click();
+    } else {
+      // next arrow
+      lightboxNextControl.click();
+    }
+  }
+});
+
+
+
+
+    </script>
+
+</body>
+
+</html>

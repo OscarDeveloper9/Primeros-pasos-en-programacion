@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcuticon" href="img/fav" type="image/ico">
+
+	<title>Imágenes-I</title>
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+</head>
+<body>
+<div id="container">
+<header>
+	<hr>
+	<h1><a id="arriba"></a>Imágenes - I</h1>
+
+</header>
+
+<?php 
+	include 'menu.php';
+	
+	?>
+	<div class="clearfix"></div>
+
+<main>
+	<article id="imagenes">
+
+	
+
+	
+		<hr>
+		<p>La etiqueta fundamental para insertar una imágen en una página web es &lt;<b>img</b>&gt;. </p>
+		<p><img src="./img/Screenshot gimp.png" width="800px" height="428px"
+				alt="Captura de pantalla de mi web favorita: www.gimp.org" vspace="20px"> <br>
+			Sin embargo sólo con la etiqueta no es suficiente, necesitamos insertar los atributos básicos que me van a
+			permitir "conectar" con la imágen en sí y mostrar cierta información relativa a la imágen en el caso de que
+			la imágen no se cargue o por cuestiones de accesibilidad.</p>
+		<h3>Dichos atributos fundamentales son:</h3>
+		<ul>
+			<li><b>SRC</b>="Ruta a la imágen"</li>
+			<li><b>ALT</b>="Descripción de la imágen"</li>
+			<li><b>WIDTH</b>="Ancho de la imágen en px o %"</li>
+			<li><b>HEIGHT</b>="Altura de la imágen en px o %"</li>
+		</ul>
+		<p>Por lo tanto una etiqueta básica completa para insertar la captura que te muestro a continuación quedaría
+			asi:</p>
+		<h3>&lt;img src="captura.jpg" alt="captura de pantalla de mi web favorita:http:/masfuertequeelhierro.com/blog/category/crossfit/"&gt;</h3>
+		<p><img src="https://picsum.photos/id/1058/250/157" width="250px" height="157px" align="left" hspace="20px"
+				alt="Deberías visualizar la imágen de un ejercicio">Otros atributos muy utilizados pero no recomendados
+			a día de hoy para la maquetación (mejor con css), pero que todavía se ven en código de manera frecuente son:
+		</p>
+		<ul>
+			<li><b>HSPACE</b>="Define un margen horizontal, por ambos lados de la imágen""</li>
+			<li><b>VSPACE</b>="Define un margen horizontal, por ambos lados de la imágen"</li>
+			<li><b>ALIGN</b>="Alineación de la imágen", éste atributo admite varios valores pero los más comunes son
+				<b>left</b> y <b>right</b>
+				<p>Sin embargo para alinear la imagen la etiqueta imágen debe estar en el código por delante de la
+					primera letra de la primera línea del párrafo u objeto al que se quiere alinear, es decir, la
+					etiqueta que yo he empleado para la imágen de la bombilla es la siguiente:</p>
+			</li>
+		</ul>
+		<p align="center"><b>&lt;img src="/crossfit.jpg" width="300" height="189" alt="" align="left"
+				hspace="20"&gt;</b></p>
+		<hr />
+		<p align="right"><a href="#arriba">SUBIR</a></p>
+
+	</article>
+	</main>
+
+	<?php 
+	include './FooterAlternativo.php';
+	
+    ?>
+	</div>
+</body>
+
+</html>

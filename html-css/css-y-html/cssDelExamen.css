@@ -1,0 +1,105 @@
+/* Hoja de estilos de maquetacion para mis paginas de Html*/
+/* Font family de google fonts: Oswald, Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+@font-face{ 
+             font-family:'Comic-Zine-OT';
+             src: url('../fuentes/comic_zine_ot-webfont.eot' );
+             src: url('../fuentes/comic_zine_ot-webfont.eot') ,
+                  url('../fuentes/comic_zine_ot-webfont.woff') ,
+                  url('../fuentes/comic_zine_ot-webfont.ttf') ,
+                  url('../fuentes/comic_zine_ot-webfont.svg') ;
+    }
+
+html{
+     width: 992px;
+     background-color: #00FFAB;
+     font-size: 100%;
+     line-height: 100%;
+     color: #070708;
+     font-family: 'Oswald';
+     font-family: 'Comic zine', Roboto Mono;
+     margin: 20px;
+     display: flex;
+     justify-content: space-between;
+     
+ }
+
+ header{
+  margin-top: 20px;
+  width: 100%;
+  height:60px;
+  background-color: #14C38E;
+  padding: 20px 0;
+  text-align: center;
+
+ 
+ nav{
+    width: 100%;
+    text-align: center;
+    background-color:rgba(144, 161, 156, .8); 
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 50px;
+     }
+  
+
+#concenidoCentral{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+ body {
+     display: flex;
+     flex-direction: column;
+     background-color: rgb(25, 173, 33);
+     font-family: 'Oswald', sans-serif;
+     font-size: 16px;
+     color: rgb(6, 8, 6);
+   }
+
+   .formulario{
+     align-items: center;
+   }
+
+   main{
+    margin:0 auto;
+    margin-bottom: 40px;
+    width:992px;
+    border:1px solid black;
+    padding: 20px;
+    
+    -webkit-box-shadow: 5px 5px 4px -1px rgba(130,130,130,0.57); 
+            box-shadow: 5px 5px 4px -1px rgba(130,130,130,0.57);
+
+}
+
+#skate{
+  float: left;
+}
+   
+tr{
+  border-radius: 2px black;
+  display: foat;
+  flex-direction:;
+
+}
+   h1 {
+     font-family: 'koulen', serif;
+     font-size: 60px;
+     color: rgb(55, 11, 248);
+   }
+                 
+
+
+
+/* footer */
+footer {
+
+  width: 100%;
+  height: 300px;
+  background-color:#08f808;
+
+}
+

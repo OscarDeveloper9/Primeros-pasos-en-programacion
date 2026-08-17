@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+	<meta charset="utf-8">
+
+	<!--Etiqueta  para colocar un icono de 16x16 px en la solapa del navegador o cuando se añade a favoritos/marcadores, el nombre de la imagen debe coincidir con lo que pongas en el atributo href de la etiqueta link-->
+
+	<!--Puedes generar iconos online desde, por ejemplo, https://www.favicon-generator.org/-->
+
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+	<!--Optimización para dispositivos móviles-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listas y Enlaces</title>
+
+	<!--Etiquetas META -->
+	<!--PRESENTACION EN RESULTADOS Y NAVEGADOR-->
+	<meta name="title" content="Desarrollo de Aplicaciones Web">
+	<meta name="description"
+		content="Práctica realizada para el curso desarrollo de aplicaciones web por el alumno Oscar Vitasse">
+
+	<!--POSICIONAMIENTO-->
+	<meta name="keywords"
+		content="etiquetado html5, css, listas, enlaces ">
+
+	<meta name="author" content="Oscar Vitasse">
+
+	<!--Enlaces a la/las hojas de estilo necesarias-->
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+
+</head>
+<body>
+<div id="container">
+<header>
+    <hr>
+    <h1 align="center" id="arriba">Listas y Enlaces</h1>
+
+</header>
+
+<?php 
+	include 'menu.php';
+	
+    ?>
+
+<div class="clearfix"></div>
+
+
+
+<section>
+	
+		<h3>Menú de Contenidos</h3>
+		
+		<ul>
+			<li><b>Inicio </b></li>
+			<li><strong>Entorno cliente</strong></li>
+			<ul>
+				<li><a href="./Ejercicio-1-(00-HTML).html" title="Mi primera pagina web">Mi primera pagina en HTML</a></li>
+				<li><a href="./img/libertadores-de-america.jpg" title="Imagen de mis carpetas">Pulsa para ver una imagen de mis carpetas</a></li>
+				<li><a href="https://es.velitessport.com/wp-content/uploads/2017/10/todo-necesitas-saber-sobre-crossfit.jpg" title="Imagen externa" target="_blank">Una imagen que no esta en mis carpetas</a></li>
+				<li><b>Tipos de documentos habituales</b></li>
+				<ol>
+					<li>Word: *.doc o *.docx</li>
+					<li>Excel: *.xls o *xlsx</li>
+					<li>PowerPoint: *.ppt o *.pptx</li>
+					<li>Comprimidos *.zip, *.rar</li>
+					<li><a href="https://www.fmed.uba.ar/sites/default/files/2019-04/BIOMECANICA%20Y%20ANATOMIA%20FUNCIONAL.pdf" title="biomecanica" target="_blank">PDF: *pdf</a></li>
+
+				</ol>
+
+			<li><b>Contacto</b></li>
+			<dl>
+  				<dt><em>E-mail</em></dt>
+  					<dd><a href="mailto:direcciondecorreofalsa@gmail.com?subject=info&Body=En que podemos ayudarlo&cc:otrocoreofalso@gmail.com&bcc:tercercorreofalso@gmail.com" title="correo de contacto">Click para pedir informacion</a></dd>
+ 				<dt><em>Telefono</em></dt>
+ 				 	<dd>621 63 06 23</dd>
+				<dt><em>Fax</em></dt>
+					<dd>621 63 06 23</dd>	  
+			</dl>
+		</ul>
+</ul>
+</section>		
+<hr>
+<p align="right"><a href="#arriba">SUBIR</a></p>
+
+
+
+
+<?php 
+	include './FooterAlternativo.php';
+	
+    ?> 
+	</div>
+</body>
+
+</htmL>

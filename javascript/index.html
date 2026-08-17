@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript - Panel DAW - Oscar Vitasse</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --card-bg: #ffffff;
+            --text: #1c1f26;
+            --text-muted: #5b6270;
+            --accent: #2e5b7a;
+            --accent-light: #eaf2f8;
+            --border: #e3e6ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .topbar {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--card-bg);
+        }
+
+        .topbar a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        header {
+            padding: 40px 24px 8px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 24px 64px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        a.item {
+            display: block;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        a.item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(20, 30, 50, 0.08);
+        }
+
+        a.item span.tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        a.item h3 {
+            margin: 0;
+            font-size: 1.02rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar"><a href="../index.html">&larr; Volver al panel</a></div>
+
+    <header>
+        <h1>JavaScript</h1>
+        <p>16 ejercicios</p>
+    </header>
+
+    <main>
+        <a class="item" href="reloj.html"><span class="tag">Tiempo</span><h3>Reloj en tiempo real</h3></a>
+        <a class="item" href="date-picker.html"><span class="tag">Tiempo</span><h3>Date picker</h3></a>
+        <a class="item" href="countdown.html"><span class="tag">Tiempo</span><h3>Countdown</h3></a>
+        <a class="item" href="galeria.html"><span class="tag">Galería</span><h3>Galería - modelo 1</h3></a>
+        <a class="item" href="galeria-dos.html"><span class="tag">Galería</span><h3>Galería - modelo 2</h3></a>
+        <a class="item" href="lightbox.html"><span class="tag">Box</span><h3>LightBox</h3></a>
+        <a class="item" href="shadowbox.html"><span class="tag">Box</span><h3>ShadowBox</h3></a>
+        <a class="item" href="slider.html"><span class="tag">Slider</span><h3>Slider de imágenes</h3></a>
+        <a class="item" href="tabs.html"><span class="tag">jQuery</span><h3>Tabs</h3></a>
+        <a class="item" href="fotorama.html"><span class="tag">jQuery</span><h3>Fotorama</h3></a>
+        <a class="item" href="editor-de-texto.html"><span class="tag">DOM</span><h3>Procesador de textos</h3></a>
+        <a class="item" href="calorias.html"><span class="tag">DOM</span><h3>Calculadora de calorías</h3></a>
+        <a class="item" href="tombola.html"><span class="tag">DOM</span><h3>Tómbola</h3></a>
+        <a class="item" href="mensajeria.html"><span class="tag">DOM</span><h3>Mensajería simulada</h3></a>
+        <a class="item" href="abono.html"><span class="tag">DOM</span><h3>Abono de transporte</h3></a>
+        <a class="item" href="ajax.html"><span class="tag">Ajax</span><h3>Ajax &amp; XML</h3></a>
+    </main>
+</body>
+
+</html>

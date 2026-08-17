@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalogo>
+    <cd>
+        <titulo>Hide your heart</titulo>
+		<artista>Bonnie Tyler</artista>
+		<pais>UK</pais>
+		<firma>CBS Records</firma>
+		<precio>9.90</precio>
+		<anio>1988</anio>
+	</cd>
+<cd>
+		<titulo>Greatest Hits</titulo>
+		<artista>Dolly Parton</artista>
+		<pais>USA</pais>
+		<firma>RCA</firma>
+		<precio>9.90</precio>
+		<anio>1982</anio>
+	</cd>
+	<cd>
+		<titulo>Still got the blues</titulo>
+		<artista>Gary Moore</artista>
+		<pais>UK</pais>
+		<firma>Virgin records</firma>
+		<precio>10.20</precio>
+		<anio>1990</anio>
+	</cd>
+	<cd>
+		<titulo>Eros</titulo>
+		<artista>Eros Ramazzotti</artista>
+		<pais>EU</pais>
+		<firma>BMG</firma>
+		<precio>9.90</precio>
+		<anio>1997</anio>
+	</cd>
+	<cd>
+		<titulo>One night only</titulo>
+		<artista>Bee Gees</artista>
+		<pais>UK</pais>
+		<firma>Polydor</firma>
+		<precio>10.90</precio>
+		<anio>1998</anio>
+	</cd>
+	<cd>
+		<titulo>Sylvias Mother</titulo>
+		<artista>Dr.Hook</artista>
+		<pais>UK</pais>
+		<firma>CBS</firma>
+		<precio>8.10</precio>
+		<anio>1973</anio>
+	</cd>
+	<cd>
+		<titulo>Maggie May</titulo>
+		<artista>Rod Stewart</artista>
+		<pais>UK</pais>
+		<firma>Pickwick</firma>
+		<precio>8.50</precio>
+		<anio>1990</anio>
+	</cd>
+	<cd>
+		<titulo>Romanza</titulo>
+		<artista>Andrea Bocelli</artista>
+		<pais>EU</pais>
+		<firma>Polydor</firma>
+		<precio>10.80</precio>
+		<anio>1996</anio>
+	</cd>
+	<cd>
+		<titulo>When a man loves a woman</titulo>
+		<artista>Percy Sledge</artista>
+		<pais>USA</pais>
+		<firma>Atlantic</firma>
+		<precio>8.70</precio>
+		<anio>1987</anio>
+	</cd>
+	<cd>
+		<titulo>Black angel</titulo>
+		<artista>Savage Rose</artista>
+		<pais>EU</pais>
+		<firma>Mega</firma>
+		<precio>10.90</precio>
+		<anio>1995</anio>
+	</cd>
+	<cd>
+		<titulo>1999 Grammy Nominees</titulo>
+		<artista>Many</artista>
+		<pais>USA</pais>
+		<firma>Grammy</firma>
+		<precio>10.20</precio>
+		<anio>1999</anio>
+	</cd>
+	<cd>
+		<titulo>For the good times</titulo>
+		<artista>Kenny Rogers</artista>
+		<pais>UK</pais>
+		<firma>Mucik Master</firma>
+		<precio>8.70</precio>
+		<anio>1995</anio>
+	</cd>
+	<cd>
+		<titulo>Big Willie style</titulo>
+		<artista>Will Smith</artista>
+		<pais>USA</pais>
+		<firma>Columbia</firma>
+		<precio>9.90</precio>
+		<anio>1997</anio>
+	</cd>
+	<cd>
+		<titulo>Tupelo Honey</titulo>
+		<artista>Van Morrison</artista>
+		<pais>UK</pais>
+		<firma>Polydor</firma>
+		<precio>8.20</precio>
+		<anio>1971</anio>
+	</cd>
+	<cd>
+		<titulo>Soulsville</titulo>
+		<artista>Jorn Hoel</artista>
+		<pais>Norway</pais>
+		<firma>WEA</firma>
+		<precio>7.90</precio>
+		<anio>1996</anio>
+	</cd>
+	<cd>
+		<titulo>The very best of</titulo>
+		<artista>Cat Stevens</artista>
+		<pais>UK</pais>
+		<firma>Island</firma>
+		<precio>8.90</precio>
+		<anio>1990</anio>
+	</cd>
+	<cd>
+		<titulo>Stop</titulo>
+		<artista>Sam Brown</artista>
+		<pais>UK</pais>
+		<firma>A and M</firma>
+		<precio>8.90</precio>
+		<anio>1988</anio>
+	</cd>
+	<cd>
+		<titulo>Bridge of Spies</titulo>
+		<artista>T'Pau</artista>
+		<pais>UK</pais>
+		<firma>Siren</firma>
+		<precio>7.90</precio>
+		<anio>1987</anio>
+	</cd>
+	<cd>
+		<titulo>Private Dancer</titulo>
+		<artista>Tina Turner</artista>
+		<pais>UK</pais>
+		<firma>Capitol</firma>
+		<precio>8.90</precio>
+		<anio>1983</anio>
+	</cd>
+	<cd>
+		<titulo>Midt om natten</titulo>
+		<artista>Kim Larsen</artista>
+		<pais>EU</pais>
+		<firma>Medley</firma>
+		<precio>7.80</precio>
+		<anio>1983</anio>
+	</cd>
+	<cd>
+		<titulo>Pavarotti Gala Concert</titulo>
+		<artista>Luciano Pavarotti</artista>
+		<pais>UK</pais>
+		<firma>DECCA</firma>
+		<precio>9.90</precio>
+		<anio>1991</anio>
+	</cd>
+	<cd>
+		<titulo>The dock of the bay</titulo>
+		<artista>Otis Redding</artista>
+		<pais>USA</pais>
+		<firma>Atlantic</firma>
+		<precio>7.90</precio>
+		<anio>1987</anio>
+	</cd>
+	<cd>
+		<titulo>Picture book</titulo>
+		<artista>Simply Red</artista>
+		<pais>EU</pais>
+		<firma>Elektra</firma>
+		<precio>7.20</precio>
+		<anio>1985</anio>
+	</cd>
+	<cd>
+		<titulo>Red</titulo>
+		<artista>The Communards</artista>
+		<pais>UK</pais>
+		<firma>London</firma>
+		<precio>7.80</precio>
+		<anio>1987</anio>
+	</cd>
+	<cd>
+		<titulo>Unchain my heart</titulo>
+		<artista>Joe Cocker</artista>
+		<pais>USA</pais>
+		<firma>EMI</firma>
+		<precio>8.20</precio>
+		<anio>1987</anio>
+	</cd>
+	
+</catalogo>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--Etiqueta  para colocar un icono en la solapa del navegador o cuando se añade a favoritos/marcadores   
+       	 <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />-->
+
+    <!--Optimización para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Formularios - Controles HTML5</title>
+    <!--Etiquetas META -->
+    <!--POSICIONAMIENTO-->
+    <meta name="title" content="Como máximo 55 caracteres incluyendo espacios en blanco">
+    <meta name="description" content="Como máximo 110 caracteres incluyendo espacios en blanco">
+
+    <!--Enlaces a las/las hojas de estilo necesarias -->
+    <meta name="keywords" content="palabras clave separadas por coma">
+    <meta name="author" content="profesor-AHM">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <hr>
+            <h1>Varios formularios- Novedades HTML5</h1>
+
+        </header>
+
+        <?php
+        include 'menu.php';
+
+        ?>
+        <div class="clearfix"></div>
+        <h3>Primer formulario, búsqueda en google</h3>
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <!--
+           Otra opcion, por ejemplo, es pasar el valor del campo search al maps de google, es decir 
+           action="http://www.google.com/maps" o cualquiera que exponga sus parámetros
+-->
+            <label for="buscar en google">Buscar en google</label>
+            <input type="search" name="q" placeholder="Escribe el término de busqueda" autofocus>
+            <input type="submit" value="Buscar en Google >>">
+        </form>
+
+
+
+        <h2>Segundo formulario, búsqueda en Amazon</h2>
+        <form action="https://www.amazon.es/s" method="get" target="_blank">
+            <!--    <label for="buscar en Amazon">Buscar en Amazon</label>-->
+            <input type="search" name="k" placeholder="Buscar en Amazon">
+            <input type="submit" value="Buscar en Amazón >>">
+        </form>
+
+
+
+        <h2>Tercer formulario, Pedido tazas</h2>
+
+        <form action="mailto:micorreo@micorreo.es" enctype="text/plain" method="post" id="form1">
+            <img src="https://m.media-amazon.com/images/I/71Pxm+V1QEL._AC_SX466_.jpg" width="300" align="left">
+            <fieldset>
+                <legend>
+                    Elige la cantidad y color de tu taza
+                </legend>
+                <h3>Actualmente en existencias</h3>
+                <meter value="8" min="0" max="10"></meter><br> <br>
+                **Máximo 10 unidades por pedido
+                <br><br>
+                <label for="cantidad">Cantidad de tazas</label>
+                <input type="number" title="Mínimo una unidad por pedido (1) y máximo 10" name="cantidad" min="1" max="10" required>
+                <br><br>
+                <label for="color">Selecciona el color</label>
+                <input type="color" name="color" value="#ff0034">
+                <br><br>
+                <label for="rango">¿Cuanto te gusta?</label>
+                <input type="range" min="0" max="5" value="2.5" step="0.5" onChange="mostrar.value=value;">
+                <output id="mostrar">2.5</output>
+                <br><br>
+            </fieldset>
+            <!--Grupo Datos de Facturación-->
+            <br>
+            <fieldset>
+                <legend>
+                    Datos de envío y facturación
+                </legend>
+                *Campos obligatorios<br><br>
+                <label for="nombre">*Nombre </label>
+                <input type="text" name="Nombre" required pattern="[A-Za-z]{3,20}" title="Solo letras (mayúsculas o minúsculas). Minimo 3 y maximo 20" maxlength="30">
+                <label for="direccion">*Dirección de entrega</label>
+                <input type="text" name="Direccion" required>
+                <br><br>
+                <label for="dia">Día de entrega</label>
+                <input type="date" min="2020-01-20" max="2020-01-29" name="Dia entrega">
+                <label for="hora">Hora de entrega (Entre las 8:00 - 17:00)</label>
+                <input type="time" min="8:00:00" max="17:00:00" title="El horario de entrega es SOLO de 8:00 - 17:00" name="Hora de entrega">
+                <br><br>
+                <!--       Aqui datos de contacto -->
+                <label for="email">*Email de contacto</label>
+                <input type="email" name="email" placeholder="abc@ef.zz" pattern="[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+                <!--  más expresiones regurales en https://www.html5pattern.com/ -->
+
+                <label for="tfno">Teléfono</label>
+                <input type="text" name="tfno" pattern="[0-9]{9,9}" placeholder="123456789" title="SOLO Números Sin prefijo internacional ni espacios 123456789" maxlength="9">
+                <!--       pattern="[\+]\d{2}[\(]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}"-->
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h2>Tarjeta de crédito</h2>
+                </legend>
+                <label for="Número de Tarjeta">*Número de Tarjeta</label>
+                <input type="text" name="Ntar" pattern="[0-9]{13,16}" title="SOLO Números sin espacios ni guiones" maxlength="16" required>
+                <br><br>
+                <label>*Fecha caducidad
+                    <input type="month" name="cardval" id="cardval" requiered>
+                </label>
+                <br><br>
+                <label>Security Code
+                    <input type="numer" name="cardsec" id="cardsec" requiered placeholder="nº posterior" pattern="[0-9]{3,4}">
+                </label>
+                <br><br>
+            </fieldset>
+            <br><br>
+            <button type="submit">Finalizar pedido >></button>
+        </form>
+        <br><br>
+
+        <?php
+        include './FooterAlternativo.php';
+
+        ?>
+    </div>
+</body>
+
+</html>

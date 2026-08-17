@@ -1,0 +1,283 @@
+
+/* Hoja de estilos para la maquetación del apartado HTML&CSS
+Autor: @hm
+Licencia: Free
+Mayo 2022 */
+
+/* Vamos a trabajar en las medidas con la definición de un elemento raiz y medidas proporcionales a él (rem) */
+
+/*Seleccion gama cromatica*/
+
+/* Color Theme Swatches in Hex */
+
+/* 
+    #363432; Color Casi Negro para todo el texto de contenido 
+    #196774; Color para las H1 Verde 
+    #90A19D; Color para fondos de contenido Gris 
+    #F0941F; Color h3 enlaces Naranja Claro 
+    #EF6024; Color para las h2 Naranja intenso 
+/*
+/* Color Theme Swatches in RGBA da la posibilidad de jugar con transparencias en los colores */
+/*
+    rgba(54, 52, 49, 1);
+    rgba(24, 103, 116, 1);
+    rgba(144, 161, 156, 1); 
+    rgba(239, 147, 31, 1); 
+    rgba(239, 96, 35, 1);
+*/
+
+/*Selección fuentes tipográficas google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*
+    
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+*/
+/*Tipografías desde mi servidor*/
+
+@font-face{ 
+	font-family: 'fuenteGogh';
+	src: url('../fonts/gogh/gogh-extrabold-webfont.eot');
+	src: url('../fonts/gogh/gogh-extrabold-webfont.eot') format('embedded-opentype'),
+	     url('../fonts/gogh/gogh-extrabold-webfont.woff') format('woff'),
+	     url('../fonts/gogh/gogh-extrabold-webfont.ttf') format('truetype'),
+	     url('../fonts/gogh/gogh-extrabold-webfont.svg') format('svg');
+}
+
+
+/* Definiendo el elemento raiz */
+
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+    line-height: 100%;
+    color: #363432;
+    /* font-family: 'fuenteGogh';*/
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+
+body{
+
+/*     margin:0;
+ */
+}
+h1, h2 {font-family: 'Montserrat', sans-serif;}
+h1{
+    color:#EF6024;
+    font-size: 3rem;
+ 
+}
+
+h2, caption {
+    color:#196774;
+    font-size: 1.6rem;
+    /* padding-bottom: 60px; REVISAR AL REINICIAR */
+}
+
+h3{
+    color:#F0941F;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+p, li, footer {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    
+}
+
+/* p{text-indent: 30px;} */
+
+header{
+    margin-top: 0;
+    width: 100%;
+    height:60px;
+    background-color:rgba(54, 52, 49, 0.2);
+    padding: 20px 0;
+   text-align: center;
+}
+
+nav{
+    width: 100%;
+    text-align: center;
+    background-color:rgba(144, 161, 156, .8); 
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+main{
+    margin:0 auto;
+    margin-bottom: 40px;
+    width:992px;
+    border:1px solid black;
+    padding: 20px;
+    
+    -webkit-box-shadow: 5px 5px 4px -1px rgba(130,130,130,0.57); 
+            box-shadow: 5px 5px 4px -1px rgba(130,130,130,0.57);
+
+}
+
+hr{
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+    width: 100%;
+}
+
+q{
+
+    font-family:fuenteGogh,sans-serif;
+    color:#196774;
+   /*  margin:40px; */
+    font-size: 2rem;
+    background-color:#F0941F;
+    line-height: 4rem;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+
+}
+
+/* Maquetación Tablas */
+
+    caption{margin:30px}
+    
+    table{
+      
+        width: 80%;
+        margin:0 auto;
+        height:250px;
+        border-collapse: collapse;
+    }
+    td, th{
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2;
+       
+    }
+
+    tr:hover {background-color: #ddd;}
+ 
+     th {
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        /* text-align: left; */
+        background-color: #196774;
+        color: white;
+     }
+
+    #textoTabla{
+
+        width: 80%;
+        border: 1px dotted #F0941F;
+        margin: 30px auto 0px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+/* Fin maquetación tablas
+ */
+    #parImagenes{
+
+        text-align: center;
+       /*  background-color: #dbca10; */
+             
+    }
+
+    #caja1, #caja2{
+        width:30%;
+        display:inline-block;
+        margin:0;
+
+    }
+#iframe1, #iframe2, #iframe3, #iframe4{
+
+        width:45%;
+        display:inline-block;
+        margin:0;
+
+}
+
+
+
+
+img{border-radius: 6px;}
+
+
+iframe{
+
+        border-radius: 12px;
+        border-style:none;
+}
+
+footer {
+
+    width: 100%;
+    height: 200px;
+    background-color:#196774;
+
+}
+
+.centrado{text-align: center;}
+
+.izquierda{text-align: left;
+    padding-left:50px;}
+
+.flotaIzda{float: left;margin-right: 30px;}
+
+/*Todos los enlaces
+    #196774; Color para las H1 Verde 
+    #90A19D; Color para fondos de contenido Gris 
+    #F0941F; Color h3 enlaces Naranja Claro 
+    #EF6024; Color para las h2 Naranja intenso */
+
+/*     Por usabilidad cada estado bien diferenciado los enlaces generales */
+a:link {
+    color:#196774;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#EF6024;
+    text-decoration: underline;
+}
+
+a:hover {
+    color:#196774;
+    text-decoration: underline;
+}
+
+a:active {
+    color:red;
+    text-decoration:line-through;
+}
+
+/* Enlaces menu SELECTORES DESCENDENTES aplicados solo a nav*/
+  
+   nav a:link, nav a:visited {
+      color: white;
+      font-weight: 600;
+      padding: 10px;
+  }  
+ 
+nav a:hover,  nav a:active{
+        color: #EF6024;
+        background-color: #196774;  
+         padding: 18px 10px;  
+ }
+nav a:link, nav a:visited, nav a:hover,  nav a:active {
+    text-decoration: none;
+}
+
+
+
+#subirArriba{text-align:right;}
+
+/* Formato apra los formularios */

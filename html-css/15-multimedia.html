@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--Etiqueta  para colocar un icono de 16x16 px en la solapa del navegador o cuando se añade a favoritos/marcadores, el nombre de la imagen debe coincidir con lo que pongas en el atributo href de la etiqueta link-->
+
+    <!--Puedes generar iconos online desde, por ejemplo, https://www.favicon-generator.org/-->
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!--Optimización para dispositivos móviles-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Multimedia</title>
+
+    <!--Etiquetas META -->
+    <!--PRESENTACION EN RESULTADOS Y NAVEGADOR-->
+    <!--Para que en los resultados de búsqueda aparezca correctamente representada la página localizada con titulo y descripcion -->
+
+    <meta name="title" content="Como máximo 55 caracteres incluyendo espacios en blanco, mismo ">
+    <meta name="description" content="Como máximo 110 caracteres incluyendo espacios en blanco">
+
+    <!--POSICIONAMIENTO-->
+    <!--Los grandes motores de búsqueda como Google ya no las utilizan, pero sí
+			los pequeños buscadores. RECOMIENDO entre 8 y 10 palabras clave y un máximo de 255 caracteres (otros hablan de un máximo de 25 palabras y 500 caracteres)-->
+
+    <meta name="keywords" content="palabras clave separadas por coma">
+
+
+    <meta name="author" content="Tu-Nombre_Aqui">
+
+    <!--Enlaces a las/las hojas de estilo necesarias-->
+
+    <!--<link rel="stylesheet" type="text/css" href="/css/comun.css" /> -->
+
+    <!-- Scripts que realizan operaciones en la estructura de la página cuando se carga-->
+
+    <!-- script js/YY.js no encontrado en el proyecto original, se omite -->
+    <link rel="stylesheet" type="text/css" href="css-globales/normalize.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+
+    
+</head>
+
+<body>
+<div id="container">
+    <header>
+        <hr>
+        <h1 id="arriba">Multimedia</h1>
+
+    </header>
+
+    <?php 
+	include 'menu.php';
+	
+    ?>
+    <div class="clearfix"></div>
+
+    <body id="arriba">
+        <main>
+            <br>
+
+            <hr>
+            <table width="992" align="center" cellpadding="10">
+                <thead>
+                    <tr bgcolor="#000">
+                        <td colspan="2">
+                            <marquee direction="right">
+                                <front color="#fff">
+                                    <h1> TERMINATOR 2</h1>
+                                </front>
+                            </marquee>
+                        </td>
+                    </tr>
+                </thead>
+
+                <body>
+                    <tr>
+                        <td><img title="Terminator 2 el juicio final" alt="Terminator 2, el juicio final" width="300px"
+                                src="https://img.youtube.com/vi/ZKEO4073bhE/hqdefault.jpg">
+
+
+                        </td>
+                        <td>
+                            <h3>Ficha Tecnica
+
+                            </h3>
+                            <br><b>Fecha de estreno: 3 de julio 1991 (137 min)</b>
+                            <b>Dirigida por:</b> James Cameron</br><b>Reparto:</b> Arnold Schwarzenegger, Linda Hamilton
+                            <br><b>Genero:</b>Accion<br><b>Pais:</b>EEUU
+                            <hr>
+                        <td>
+                            <h3>Sinopsis</h3>
+                            <p>Diez años después de que Sarah Connor derrotara al primer Terminator, un nuevo modelo
+                                mucho más avanzado, el T-1000, es enviado desde el futuro para acabar con su hijo John,
+                                el futuro líder de la resistencia humana. Para protegerlo, la resistencia envía a su vez
+                                una versión reprogramada del T-800 original. Dirigida por James Cameron, la película es
+                                considerada una de las cumbres del cine de acción y ciencia ficción de los años 90.</p>
+                            <hr>
+                            <h3>
+                                <stong>Terminator 2: Judgment Day - Tráiler oficial</stong>
+
+                            </h3>
+                        </td>
+                                    </tr> <tr bgcolor="#eae8e8">
+                        <td align="center" colspan="2">
+                            <h2> Terminator 2 - Tráiler oficial</h2>
+                            <iframe width="700" height="394" src="https://www.youtube.com/embed/ZKEO4073bhE"
+                                title="Terminator 2: Judgment Day - Official Trailer" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+                        </td>
+                    </tr>
+                </body>
+            </table> <br><br>
+
+            <p align="center"><a href="#arriba">Up!</a> </p> </main> </body>
+
+            <?php 
+	include './FooterAlternativo.php';
+	
+    ?> 
+    </div>
+    </body>
+
+</html>

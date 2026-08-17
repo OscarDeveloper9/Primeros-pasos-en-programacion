@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML &amp; CSS - Panel DAW - Oscar Vitasse</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --card-bg: #ffffff;
+            --text: #1c1f26;
+            --text-muted: #5b6270;
+            --accent: #2e5b7a;
+            --accent-light: #eaf2f8;
+            --border: #e3e6ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .topbar {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--card-bg);
+        }
+
+        .topbar a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        header {
+            padding: 40px 24px 8px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 24px 64px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        a.item {
+            display: block;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        a.item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(20, 30, 50, 0.08);
+        }
+
+        a.item span.tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        a.item h3 {
+            margin: 0;
+            font-size: 1.02rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar"><a href="../index.html">&larr; Volver al panel</a></div>
+
+    <header>
+        <h1>HTML &amp; CSS</h1>
+        <p>16 ejercicios</p>
+    </header>
+
+    <main>
+        <a class="item" href="ejercicio-4-etiquetado-estructural.html"><span class="tag">Semántica</span><h3>Etiquetado estructural y texto</h3></a>
+        <a class="item" href="ejercicio-5-listas-enlaces.html"><span class="tag">Semántica</span><h3>Listas y enlaces</h3></a>
+        <a class="item" href="04-imagenes-1.html"><span class="tag">Imágenes</span><h3>Imágenes I</h3></a>
+        <a class="item" href="05-imagenes-2.html"><span class="tag">Imágenes</span><h3>Imágenes II</h3></a>
+        <a class="item" href="07-tablas-1.html"><span class="tag">Tablas</span><h3>Tablas</h3></a>
+        <a class="item" href="09-formularios-1.html"><span class="tag">Formularios</span><h3>Formularios I</h3></a>
+        <a class="item" href="11-formularios-3.html"><span class="tag">Formularios</span><h3>Formularios III</h3></a>
+        <a class="item" href="012-iframes.html"><span class="tag">Iframes</span><h3>Iframes</h3></a>
+        <a class="item" href="15-multimedia.html"><span class="tag">Multimedia</span><h3>Audio y vídeo HTML5</h3></a>
+        <a class="item" href="04-videojuegos-flexbox.html"><span class="tag">Flexbox</span><h3>Videojuegos (flexbox)</h3></a>
+        <a class="item" href="campamento-boxmodel/CAMPAMENTO SOLUCION.html"><span class="tag">Box model</span><h3>Campamento (box model)</h3></a>
+        <a class="item" href="vodafone-boxmodel/vodafone.html"><span class="tag">Box model</span><h3>Vodafone (box model)</h3></a>
+        <a class="item" href="layout-manuel.html"><span class="tag">Layout</span><h3>Layout</h3></a>
+        <a class="item" href="rwd-camisetas.html"><span class="tag">Responsive</span><h3>RWD Camisetas</h3></a>
+        <a class="item" href="orla.html"><span class="tag">Proyecto</span><h3>Orla</h3></a>
+        <a class="item" href="examen.html"><span class="tag">Examen</span><h3>Examen final</h3></a>
+    </main>
+</body>
+
+</html>

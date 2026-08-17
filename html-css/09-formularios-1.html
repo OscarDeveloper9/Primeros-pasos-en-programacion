@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--     <meta charset="ISO-8859-1">
+ -->
+    <link rel="icon" type="img/ico" href="../favicon.ico">
+    <title>Formularios-I</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./css-y-html/Estilo.css">
+
+</head>
+<body>
+<div id="container">
+<header>
+        <hr>
+        <h1 id="titular"> Formularios - I - Etiquetas universales</h1>
+        
+
+
+    </header>
+    
+    
+    <?php 
+	        include 'menu.php';
+	
+    ?>
+    <div class="clearfix"></div>
+    <main>
+        <section id="formularios">
+
+        <hr>
+        <h2><img src="./img/lapiz.jpg" width="30">Rellena tu Perfil</h2>
+
+        <form action="mailto:micorreo@mio.es" method="post" enctype="text/plain">
+
+
+            <table>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>
+                                Datos Personales
+                            </legend>
+                            <label for="Nombre">Nombre</label>
+                            <p>
+                                <input type="text" name="Nombre" value="" size="40" maxlength="30">
+                            </p>
+                            <label for="Apellidos">Apellidos</label>
+                            <p>
+                                <input type="text" name="Apellidos" value="" size="40" maxlength="80">
+                            </p>
+
+                            <label for="Contraseña"> Contraseña / *Máximo 8 caracteres</label>
+
+                            <p>
+                                <input type="password" name="Pass" value="" maxlength="8">
+                            </p>
+
+                            <label for="DNI">DNI / *Máximo 9 caracteres sin guiones</label>
+
+                            <p>
+                                <input type="text" name="Dni" value="" maxlength="9">
+                            </p>
+
+                            <label for="Sexo">
+                                <p>Sexo</p>
+                            </label>
+                            <hr>
+                            <input type="radio" name="Sexo" value="Hombre"> Hombre <p>
+                                <input type="radio" name="Sexo" value="Mujer">Mujer<p>
+                                    <input type="radio" name="Sexo" value="Otro"> Otro <br>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>
+                                Otros Datos
+                            </legend>
+                            <label for="Pais">País</label>
+                            <p>
+                                <select name="Pais" id="Pais">
+                                    <option value="" selected="selected">-Selecciona un valor-</option>
+                                    <option value="Espa&ntilde;a">España</option>
+                                    <option value="Alemania">Alemania</option>
+                                    <option value="Francia">Francia</option>
+                                    <option value="Italia">Italia</option>
+                                </select>
+                            </p>
+                            <h2>Temas de interés</h2>
+                            *Puedes seleccionar más de una opción<br>
+                            si mantienes pulsada la tecla CTRL<br>
+                            <br>
+                            <select multiple size="6" id="Temas_De_Interes" name="Temas_De_Interes">
+                                <option value="Nuevas tecnolog&iacute;as" name="Nuevas tecnolog&iacute;as">Nuevas
+                                    tecnologías</option>
+                                <option value="Deporte" name="Deporte">Deporte</option>
+                                <option value="Turismo" name="Turismo">Turismo</option>
+                                <option value="Informática de consumo" name="Informática de consumo">Informática de
+                                    consumo</option>
+                                <option value="Decoraci&oacute;n" name="Decoraci&oacute;n">Decoración
+                                </option>
+                                <option value="Formaci&oacute;" name="Formación">Formación</option>
+                                <option value="Oposiciones" name="Oposiciones">Oposiciones</option>
+                            </select>
+                            <br><br>
+
+                            <label for="Navegador Preferido">Navegador Preferido</label> <br><br>
+
+                            <select id="Navegador" name="Navegador">
+
+                                <label for="Navegadores">Navegadores</label>
+
+                                <option value="Sin Seleccionar">Pulsa para Seleccionar</option>
+                                <option value="Internet Explorer" name="Internet Explorer">Internet Explorer</option>
+                                <option value="Firefox" name="Firefox">Firefox</option>
+                                <option value="Safari" name="Safari">Safari</option>
+                                <option value="Opera" name="Opera">Opera</option>
+                                <option value="Opera" name="Opera">Chrome</option>
+                                <option value="Other" name="Otro">Otro</option>
+                            </select>
+                            <!--    option group aqui-->
+                            <br><br>
+
+                            <label for="Entorno">Entorno de Desarrollo</label><br><br>
+                            <select id="Entorno" name="Entorno">
+                                <option value="Sin Seleccionar">Pulsa para Seleccionar</option>
+                                <optgroup label="Sistemas Operativos">
+                                    <option value="Windows" name="Windows">Windows</option>
+                                    <option value="Mac" name="Mac">Mac</option>
+                                    <option value="Linux" name="Linux">Linux</option>
+                                    <option value="Otro" name="Otro">Otro</option>
+                                </optgroup>
+                                <optgroup label="Dispositivo">
+                                    <option value="Desktop / Escritorio PC" name="Desktop / Escritorio PC">Desktop /
+                                        Escritorio PC</option>
+                                    <option value="Tablet" name="Tablet">Tablet</option>
+                                    <option value="Móvil" name="Móvil">Móvil</option>
+                                    <option value="Otro" name="Otro">Otro</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!--Fila Combinada con la casilla de subscripción-->
+                <tr>
+                    <td colspan="2" align="center">
+                        <br />
+                        <input name="Suscribir" type="checkbox" value="Si" checked disabled readonly>
+                        <label for="Suscribir"> <i>Suscribirme al boletín de novedades</i></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <br>
+                        <input type="submit" name="enviar2" value="Enviar Datos&gt;&gt;">
+                        <input type="image" src="./img/BotonEnviar.png" width="100">
+                        <button name="limpiar2" type="reset">&lt;&lt;Borrar los datos</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <p></p>
+                        <hr>
+                        <p align="right"><a href="#titular">SUBIR</a></p>
+                        <p>&nbsp;</p>
+                    </td>
+                </tr>
+            </table>
+
+            <!--    Ejemplo campos ocultos-->
+
+            <input type="hidden" name="user" value="En su momento valor de variable nombre">
+            <input type="hidden" name="pass" value="En su momento valor de variable pass">
+        </form>
+    </section>
+    </main>
+
+    <?php 
+	include './FooterAlternativo.php';
+	
+    ?> 
+    </div>
+</body>
+
+</html>

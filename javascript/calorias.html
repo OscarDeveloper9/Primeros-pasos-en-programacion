@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="language" content="es" />
+    <title>| DAW | - JAVASCRIPT</title>
+    <meta name="Title" content="| DAW | - JAVASCRIPT" />
+    <meta name="description" content="Ejercicicios utilizando tecnologías WEB en el cliente" />
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JAVASCRIPT, PHP, SQL, Bases de datos, Hease, WEB, Accesibilidad" />
+    <meta name="distribution" content="global" />
+    <meta name="author" content="Vuestro nombre" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--    Animaciones CSS https://daneden.github.io/animate.css/-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <!--El menu es de aqui: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <!--Estilos-->
+    <style>
+        body {
+	font-family: 'Segoe UI';
+}
+#main {
+	width:400px;
+	height: auto;
+	padding:20px;
+	margin-top:200px;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #000;
+	text-align:center;
+}
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #000000;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            opacity: 0.9;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        /*CSS para la imagen de fondo y los textos centrados estilo etiquetas*/
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+
+
+        }
+
+        .bgimg-1 {
+            position: relative;
+            background: url("./img/Hawaii-Beach-1920x1080.jpg") no-repeat center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            opacity: 0.85;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            color: #000000;
+            opacity: 0.85;
+            z-index: -100;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+
+            /*Si comentamos la linea inferior las etiquetas de texto quedan juntas, valorar al gusto*/
+
+            line-height: 100px;
+
+        }
+        
+        #contenido{
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 90%;
+            background-color:snow;
+            border: 1px solid black;
+            padding: 50px; 
+            
+        }
+
+        .mano{
+            cursor: pointer;
+        }
+
+        footer {
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #000000;
+            opacity: 0.85;
+            padding: 10px;
+            color: white;
+
+        }
+
+        /*        Enlaces para el pie*/
+        a.enlacepie:link {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:visited {
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        a.enlacepie:hover {
+            text-decoration: underline;
+            color: lightpink;
+        }
+
+        a.enlacepie:active {
+            text-decoration: underline;
+            color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="bgimg-1 animated fadeIn">
+       
+        <nav class="topnav" id="myTopnav">
+
+<a href="../index.html">HOME</a>
+
+<div class="dropdown">
+
+    <button class="dropbtn">Técnicos
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./abono.html">Abono transporte</a>
+        <a href="./tombola.html">¡Tombola!</a>
+        <a href="./mensajeria.html">Mensajería</a>
+        <a href="./calorias.html">Chocolate</a>
+        <a href="./editor-de-texto.html">Procesador de Textos</a>
+        <a href="./ajax.html">Ajax & Xml</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Box
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./lightbox.html">LightBox</a>
+        <a href="./shadowbox.html">ShadowBox</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Sliders<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./slider.html">Modelo 1</a>
+
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Galerías
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./galeria.html">Modelo 1</a>
+        <a href="./galeria-dos.html">Modelo 2</a>
+
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Tiempo
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./reloj.html">Reloj</a>
+        <a href="./date-picker.html">DatePicker</a>
+        <a href="./countdown.html">CountDown</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">jQuery
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./fotorama.html">Fotorama</a>
+        <a href="./tabs.html">Tabs</a>
+
+    </div>
+</div>
+
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+
+        <!--A partir de aqui el contenido-->
+
+        <div>
+            <div class="caption animated zoomInDown">
+                <span class="border">Titulo del Script</span><br>
+<!--                <span class="border">-->
+                    
+                    <div id="contenido">
+                    
+                    <form id="form1" name="form1" method="post" action="">
+  <h3>¿Cuantas Kilocalorías hay en?</h3>
+  <p>
+    <label for="tipo">Tipo de Chocolate</label>
+    <select name="tipo" id="tipo">
+      <option value="Negro_Amargo">Negro Amargo</option>
+      <option value="Chocolate de Taza">Chocolate de Taza</option>
+      <option value="Chocolate_con_leche">Chocolate con leche</option>
+      <option value="Chocolate Blanco">Chocolate Blanco</option>
+      <option value="Chocolate Light">Chocolate Light</option>
+    </select>
+  </p>
+  <p>Cantidad (en gramos) 
+    <label for="gramos"></label>
+    <input name="gramos" type="text" id="gramos" value="100" size="8">
+  </p>
+  <p>Total calorias (en Kcal) 
+    <label for="Kcal"></label>
+    <input name="Kcal" type="text" id="Kcal" onfocus= "calcula();"  onclick="calcula();" onBlur="limpito();" size="6" readonly>
+   
+    
+  Kcal</p>
+</form>
+                    
+                    </div>
+                
+<!--                </span>-->
+            </div>
+
+        </div>
+        <footer>Fuente: <a href="#" class="enlacepie">Dirección URL de la web donde esté el Script</a></footer>
+    </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function calcula(){
+		
+        var posicion=document.getElementById('tipo').options.selectedIndex; 
+                //Un simple alert nos da la posicion del seleccionado en el desplegable
+                    //alert (posicion)
+                //Mediante la propiedad options[posicion] obtenemos el texto
+                    //alert(document.getElementById('tipo').options[posicion].text); 
+                //var tipo_choco=	document.getElementById('tipo').options[posicion].text;
+                
+                    
+        var calorias = 0;
+        
+        switch(posicion) {
+          case 0:
+                //alert ('primer choco');
+                var calorias=560;
+                //alert (calorias);
+            break;
+            
+              case 1:
+                //alert ('segundo choco');
+                var calorias=520;
+                //alert (calorias);
+            break;
+            
+              case 2:
+                //alert ('tercer choco');
+                var calorias=570;
+                //alert (calorias);
+            break;
+            
+            case 3:
+                //alert ('cuarto choco');
+                var calorias=540;
+                //alert (calorias);
+            break;
+            
+            case 4:
+                //alert ('quinto choco');
+                var calorias=520;
+                //alert (calorias);
+            break;
+            
+          default:
+            alert ('ninguno seleccionado');
+            break;
+        }
+                
+                var cantidad=document.getElementById('gramos').value;
+                if (isNaN(cantidad)){
+                    
+                    alert ('tienes que poner una cantidad de gramos');
+                    
+                    //document.form1.gramos.focus();
+                    document.getElementById("gramos").value="";
+                    document.getElementById("gramos").focus();
+                    return false;
+                }
+                
+                
+                var total=(calorias*cantidad)/1000;
+                document.getElementById('Kcal').value=total;
+        
+                    
+            }
+    </script>
+
+</body></html>

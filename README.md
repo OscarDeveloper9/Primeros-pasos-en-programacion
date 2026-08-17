@@ -1,5 +1,8 @@
 # Panel de ejercicios DAW
 
+<img width="923" height="560" alt="ghdhgfdhddfghgfhgfhff" src="https://github.com/user-attachments/assets/16f5693f-ca51-4372-b908-9f50e11ecb38" />
+
+
 Panel visual con los ejercicios de HTML, CSS y JavaScript realizados durante mi formación en Desarrollo de Aplicaciones Web (Certificado de Profesionalidad + Bootcamp Full Stack, Coderhouse 2025).
 
 🔗 **Demo en vivo:** _(añade aquí la URL de Vercel una vez desplegado)_

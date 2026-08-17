@@ -5,7 +5,7 @@
 
 Panel visual con los ejercicios de HTML, CSS y JavaScript realizados durante mi formación en Desarrollo de Aplicaciones Web (Certificado de Profesionalidad + Bootcamp Full Stack, Coderhouse 2025).
 
-🔗 **Demo en vivo:** _(añade aquí la URL de Vercel una vez desplegado)_
+🔗 **Demo en vivo:** https://oscardeveloper9.github.io/Primeros-pasos-en-programacion/
 
 ## Contenido
 
